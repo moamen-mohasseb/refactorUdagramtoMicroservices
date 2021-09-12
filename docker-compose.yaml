@@ -40,3 +40,4 @@ services:
       - /c/Users/moamen_mohasseb/.aws
     ports:
       - "8100:80"
+      
