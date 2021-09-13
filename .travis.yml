@@ -16,21 +16,21 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
-  - docker tag udagram-reverseproxy moamenmohasseb/reverseproxy:v1
+  - docker tag udagram-reverseproxy moamenmohasseb/reverseproxy:v2
   - docker build -t udagram-api-feed ./udagram-api-feed
-  - docker tag udagram-api-feed moamenmohasseb/udagram-api-feed:v1
+  - docker tag udagram-api-feed moamenmohasseb/udagram-api-feed:v2
   - docker build -t udagram-api-user ./udagram-api-user
-  - docker tag udagram-api-user moamenmohasseb/udagram-api-user:v1
+  - docker tag udagram-api-user moamenmohasseb/udagram-api-user:v2
   - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend moamenmohasseb/udagram-frontend:v1
+  - docker tag udagram-frontend moamenmohasseb/udagram-frontend:v2
 
   
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push moamenmohasseb/reverseproxy:v1
-  - docker push moamenmohasseb/udagram-api-feed:v1
-  - docker push moamenmohasseb/udagram-api-user:v1
-  - docker push moamenmohasseb/udagram-frontend:v1
+  - docker push moamenmohasseb/reverseproxy:v2
+  - docker push moamenmohasseb/udagram-api-feed:v2
+  - docker push moamenmohasseb/udagram-api-user:v2
+  - docker push moamenmohasseb/udagram-frontend:v2
   
