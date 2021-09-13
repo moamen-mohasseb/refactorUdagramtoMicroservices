@@ -5,7 +5,7 @@ metadata:
     app: udagram-frontend
   name: udagram-frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: udagram-frontend
@@ -15,7 +15,7 @@ spec:
         app: udagram-frontend
     spec:
       containers:
-      - image: moamenmohasseb/udagram-frontend
+      - image: moamenmohasseb/udagram-frontend:v1
         name: udagram-api-user
         imagePullPolicy: Always          
         resources:

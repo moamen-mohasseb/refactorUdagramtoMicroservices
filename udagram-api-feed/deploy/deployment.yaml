@@ -5,7 +5,7 @@ metadata:
     app: udagram-api-feed
   name: udagram-api-feed
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: udagram-api-feed
@@ -15,7 +15,7 @@ spec:
         app: udagram-api-feed
     spec:
       containers:
-      - image: moamenmohasseb/udagram-api-feed
+      - image: moamenmohasseb/udagram-api-feed:v1
         name: udagram-api-feed
         imagePullPolicy: Always          
         resources:
