@@ -15,7 +15,7 @@ spec:
         app: udagram-frontend
     spec:
       containers:
-      - image: moamenmohasseb/udagram-frontend:v4
+      - image: moamenmohasseb/udagram-frontend:v5
         name: udagram-api-user
         imagePullPolicy: Always          
         resources:
