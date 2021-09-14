@@ -23,8 +23,8 @@ spec:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "2024Mi"
-            cpu: "600m"       
+            memory: "3024Mi"
+            cpu: "800m"       
         ports:
         - containerPort: 8080
       restartPolicy: Always
