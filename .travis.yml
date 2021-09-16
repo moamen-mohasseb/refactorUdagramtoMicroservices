@@ -15,14 +15,14 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend moamenmohasseb/udagram-frontend:v7
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
+  - docker tag udagram-reverseproxy moamenmohasseb/udagram-reverseproxy:v7
 
   
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push moamenmohasseb/udagram-frontend:v7
+  - docker push moamenmohasseb/udagram-reverseproxy:v7
 
   

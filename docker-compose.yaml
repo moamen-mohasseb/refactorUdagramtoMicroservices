@@ -41,7 +41,7 @@ services:
       - 8081:8080
     restart: on-failure
   frontend:
-    image: udagram-frontend
+    image: udagram-frontend:local
     depends_on:
         - udagram-api-feed
         - udagram-api-users

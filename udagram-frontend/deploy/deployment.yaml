@@ -16,15 +16,15 @@ spec:
     spec:
       containers:
       - image: moamenmohasseb/udagram-frontend:v7
-        name: udagram-api-user
+        name: udagram-frontend
         imagePullPolicy: Always          
         resources:
           requests:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
-            cpu: "500m"       
+            memory: "600Mi"
+            cpu: "300m"       
         ports:
         - containerPort: 80
       restartPolicy: Always

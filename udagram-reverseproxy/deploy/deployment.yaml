@@ -15,7 +15,7 @@ spec:
         app: udagram-reverseproxy
     spec:
       containers:
-      - image: moamenmohasseb/reverseproxy:v4
+      - image: moamenmohasseb/reverseproxy:v7
         name: udagram-reverseproxy
         imagePullPolicy: Always          
         resources:
@@ -23,7 +23,7 @@ spec:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
+            memory: "600Mi"
             cpu: "500m"       
         ports:
         - containerPort: 8080
