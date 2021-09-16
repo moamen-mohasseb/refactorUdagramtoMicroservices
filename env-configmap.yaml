@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: my-udagram-refactor
+  AWS_BUCKET: my-s3bucket-udagram
   AWS_PROFILE: default
-  AWS_REGION: us-east-1
+  AWS_REGION: us-east-2
   JWT_SECRET: hello
   POSTGRES_DB: postgres
-  POSTGRES_HOST: database-1.cjj9etslhuzd.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.czzp8uhjhbbx.us-east-2.rds.amazonaws.com
+  URL: http://a14e1a63537e84116b7e46ab1c3e578d-1760745014.us-east-2.elb.amazonaws.com/
 metadata:
   name: env-config
